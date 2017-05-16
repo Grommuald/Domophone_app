@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Domophone</string>
+    <string name="message_hint">Wpisz treść wiadomości</string>
+    <string name="send">Wyślij</string>
+    <string name="profile_me">Mój obrazek profilowy</string>
+    <string name="profile_other">Obrazek profilowy innych</string>
+    <string name="ic_intercom_title">Domofon</string>
+    <string name="ic_advertisements_title">Ogłoszenia</string>
+    <string name="ic_discussions_title">Dyskusje</string>
+    <string name="ic_shoutbox_title">Czat</string>
+    <string name="pref_previously_started">pref_previously_started</string>
+</resources>

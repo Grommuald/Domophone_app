@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_intercom"
+        android:enabled="true"
+        android:icon="@drawable/ic_intecom"
+        android:title="@string/ic_intercom_title"
+        android:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_advertisement"
+        android:enabled="true"
+        android:icon="@drawable/ic_advertisements"
+        android:title="@string/ic_advertisements_title"
+        android:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_discussions"
+        android:enabled="true"
+        android:icon="@drawable/ic_discussions"
+        android:title="@string/ic_discussions_title"
+        android:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_shoutbox"
+        android:enabled="true"
+        android:icon="@drawable/ic_shoutbox"
+        android:title="@string/ic_shoutbox_title"
+        android:showAsAction="ifRoom"/>
+</menu>
