@@ -51,18 +51,6 @@ public class ChatActivity extends AppCompatActivity {
     boolean mFirstLoad;
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        boolean previouslyStarted = prefs.getBoolean(getString(R.string.pref_previously_started), false);
-        if(!previouslyStarted) {
-            SharedPreferences.Editor edit = prefs.edit();
-            edit.putBoolean(getString(R.string.pref_previously_started), Boolean.TRUE);
-            edit.commit();
-            showFirstTimeLoginActivity();
-        }
-    }
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
@@ -83,6 +71,17 @@ public class ChatActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        boolean previouslyStarted = prefs.getBoolean(getString(R.string.pref_previously_started), false);
+        Toast.makeText(ChatActivity.this, "previouslyStarted = " + Boolean.toString(previouslyStarted),
+                Toast.LENGTH_SHORT).show();
+        if(!previouslyStarted) {
+            SharedPreferences.Editor edit = prefs.edit();
+            edit.putBoolean(getString(R.string.pref_previously_started), Boolean.TRUE);
+            edit.commit();
+            showFirstTimeLoginActivity();
+        }
 
         if (ParseUser.getCurrentUser() != null) {
             startWithCurrentUser();
